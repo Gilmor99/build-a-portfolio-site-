@@ -114,21 +114,33 @@ main {
 .featured-work {
   display: flex;
   align-self: stretch;
-  flex-flow: row wrap;
+  flex-flow: wrap;
   width:100%;
   max-width: 100%;
   align-items: center;
   position: relative;
+
  }
+
+ @media only screen and (max-width : 800px) {
+     .featured-work {
+         flex-direction: column;
+     }
+ }
+
 
 figure {
     flex-flow: column wrap;
-    align-self: center;
+    align-self: stretch;
     position: relative;
-    width: 30%;
-    margin: 10px;
-    height: 400px;
+    width: 320px;
     max-width: 100%;
+}
+
+@media only screen and (min-width : 1900px) {
+    figure {
+        width: 550px;
+    }
 }
 
 img {
